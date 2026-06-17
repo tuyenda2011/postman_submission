@@ -1,0 +1,11 @@
+Đặt ảnh chụp màn hình kết quả Postman vào thư mục này.
+Tên ảnh nên đặt đúng như trong README.md:
+01-postman-home.png
+02-create-collection.png
+03-environment-variable.png
+04-get-posts-result.png
+05-get-post-detail-result.png
+06-post-create-result.png
+07-put-update-result.png
+08-delete-result.png
+09-collection-runner-result.png
