@@ -8,6 +8,8 @@ localResources:
   environments:
     - ..\Postman_API_Testing_Environment.postman_environment.json
 
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
 cloudResources:
   collections:
     ..\postman\collections\Postman API Testing Practice: 51c63802-3492-443b-86c6-f77b15e7d32a
