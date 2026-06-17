@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: 85b89725-77f9-497b-85a8-835707cdac8c
+
+localResources:
+  collections:
+    - ..\Postman_API_Testing_Practice.postman_collection.json
+  environments:
+    - ..\Postman_API_Testing_Environment.postman_environment.json
+
+cloudResources:
+  collections:
+    ..\postman\collections\Postman API Testing Practice: 51c63802-3492-443b-86c6-f77b15e7d32a

@@ -1,0 +1,4 @@
+name: Postman API Testing Environment
+values:
+  - key: base_url
+    value: 'https://jsonplaceholder.typicode.com'

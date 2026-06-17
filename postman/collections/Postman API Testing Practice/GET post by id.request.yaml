@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{base_url}}/posts/1"
+method: GET
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Post id is 1", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData.id).to.eql(1);
+      });
+
+      pm.test("Response has required fields", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("id");
+          pm.expect(jsonData).to.have.property("title");
+          pm.expect(jsonData).to.have.property("body");
+          pm.expect(jsonData).to.have.property("userId");
+      });
+    language: text/javascript
+order: 2000

@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{base_url}}/posts/1"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "id": 1,
+      "title": "Updated title by Postman",
+      "body": "This post was updated during API testing.",
+      "userId": 1
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Title is updated", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData.title).to.eql("Updated title by Postman");
+      });
+    language: text/javascript
+order: 4000
